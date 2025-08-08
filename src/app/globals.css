@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --card-bg: 30, 30, 30;
+  --card-shadow-light: 45, 45, 45;
+  --card-shadow-dark: 15, 15, 15;
+  --accent-color: 100, 100, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.neuromorphic-card {
+  background-color: rgb(var(--card-bg));
+  border-radius: 16px;
+  box-shadow: 
+    8px 8px 16px rgba(var(--card-shadow-dark), 0.8),
+    -8px -8px 16px rgba(var(--card-shadow-light), 0.4);
+  transition: all 0.3s ease;
+}
+
+.neuromorphic-card:hover {
+  box-shadow: 
+    10px 10px 20px rgba(var(--card-shadow-dark), 0.9),
+    -10px -10px 20px rgba(var(--card-shadow-light), 0.5);
+  transform: translateY(-2px);
+}
+
+.neuromorphic-button {
+  background-color: rgb(var(--card-bg));
+  border-radius: 8px;
+  box-shadow: 
+    4px 4px 8px rgba(var(--card-shadow-dark), 0.8),
+    -4px -4px 8px rgba(var(--card-shadow-light), 0.4);
+  transition: all 0.2s ease;
+  color: #fff;
+}
+
+.neuromorphic-button:hover {
+  box-shadow: 
+    2px 2px 4px rgba(var(--card-shadow-dark), 0.8),
+    -2px -2px 4px rgba(var(--card-shadow-light), 0.4);
+  transform: translateY(1px);
+}
+
+.neuromorphic-button:active {
+  box-shadow: inset 
+    2px 2px 4px rgba(var(--card-shadow-dark), 0.8),
+    inset -2px -2px 4px rgba(var(--card-shadow-light), 0.4);
+}
+
+.neuromorphic-input {
+  background-color: rgb(var(--card-bg));
+  border-radius: 8px;
+  box-shadow: inset 
+    2px 2px 4px rgba(var(--card-shadow-dark), 0.8),
+    inset -2px -2px 4px rgba(var(--card-shadow-light), 0.4);
+  color: #fff;
+}
+
+.neuromorphic-input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Code syntax highlighting */
+pre {
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+  background-color: rgba(40, 40, 40, 0.9);
+}
+
+code {
+  font-family: 'Fira Code', monospace;
+}
+
+/* LaTeX styling */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0;
+}
+
+/* Ensure math/text are visible on dark background */
+.katex, .katex-display, .katex-html {
+  color: #fff;
+}

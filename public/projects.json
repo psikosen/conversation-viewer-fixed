@@ -1,0 +1,70 @@
+[
+  {
+    "uuid": "1d8618be-9144-4a73-a9d5-23e6ca61e735",
+    "name": "How to use Claude",
+    "description": "An example project that also doubles as a how-to guide for using Claude. Chat with it to learn more about how to get the most out of chatting with Claude!",
+    "is_private": false,
+    "is_starter_project": true,
+    "prompt_template": "",
+    "created_at": "2024-06-25T06:57:18.816937+00:00",
+    "updated_at": "2024-06-25T06:57:18.816937+00:00",
+    "creator": {
+      "uuid": "4a32f0ae-ff22-4c1a-911f-8026160feeb0",
+      "full_name": "Raymond Gonzalez"
+    },
+    "docs": [
+      {
+        "uuid": "28769e72-a508-4695-ae4c-d74008405858",
+        "filename": "Claude prompting guide.md",
+        "content": "# Claude Prompting Guide\n\nThis document provides tips for getting the most out of your conversations with Claude."
+      }
+    ]
+  },
+  {
+    "uuid": "2e9718be-8244-4b73-b9d5-13e6ca61e845",
+    "name": "JavaScript Learning",
+    "description": "A collection of JavaScript tutorials and examples for learning modern JavaScript development.",
+    "is_private": false,
+    "is_starter_project": false,
+    "prompt_template": "",
+    "created_at": "2024-06-20T12:34:18.816937+00:00",
+    "updated_at": "2024-06-22T15:42:18.816937+00:00",
+    "creator": {
+      "uuid": "5b42f0ae-ff22-4c1a-911f-8026160feeb0",
+      "full_name": "Alex Johnson"
+    },
+    "docs": [
+      {
+        "uuid": "38769e72-a508-4695-ae4c-d74008405858",
+        "filename": "JavaScript Basics.md",
+        "content": "# JavaScript Basics\n\nThis document covers fundamental JavaScript concepts including variables, functions, and control flow."
+      },
+      {
+        "uuid": "48769e72-a508-4695-ae4c-d74008405858",
+        "filename": "Modern JS Features.md",
+        "content": "# Modern JavaScript Features\n\nThis document covers ES6+ features like arrow functions, destructuring, and async/await."
+      }
+    ]
+  },
+  {
+    "uuid": "3f8718be-7344-4c73-c9d5-43e6ca61e955",
+    "name": "React Project Templates",
+    "description": "A collection of React project templates and component patterns for rapid development.",
+    "is_private": true,
+    "is_starter_project": false,
+    "prompt_template": "",
+    "created_at": "2024-05-15T09:22:18.816937+00:00",
+    "updated_at": "2024-06-18T11:37:18.816937+00:00",
+    "creator": {
+      "uuid": "6c42f0ae-ff22-4c1a-911f-8026160feeb0",
+      "full_name": "Sarah Miller"
+    },
+    "docs": [
+      {
+        "uuid": "58769e72-a508-4695-ae4c-d74008405858",
+        "filename": "Component Patterns.md",
+        "content": "# React Component Patterns\n\nThis document covers common React component patterns including HOCs, render props, and hooks."
+      }
+    ]
+  }
+]

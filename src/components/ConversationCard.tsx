@@ -27,13 +27,13 @@ const ConversationCard: React.FC<ConversationCardProps> = ({ conversation, onCli
   
   return (
     <NeuromorphicCard className="cursor-pointer h-full" onClick={onClick}>
-      <div className="flex flex-col h-full">
-        <h3 className="text-xl font-bold mb-2">{conversation?.meta?.title || 'Untitled Conversation'}</h3>
-        <div className="text-sm text-gray-400 mb-2">
+      <div className="flex flex-col h-full text-white p-4 gap-1">
+        <h3 className="text-xl font-bold mb-2 text-white">{conversation?.meta?.title || 'Untitled Conversation'}</h3>
+        <div className="text-sm text-gray-300 mb-2">
           Exported: {conversation?.meta?.exported_at ? new Date(conversation.meta.exported_at).toLocaleDateString() : 'Unknown'}
         </div>
-        <p className="text-gray-300 flex-grow">{preview}</p>
-        <div className="text-sm text-gray-400 mt-4">
+        <p className="text-gray-200 flex-grow leading-relaxed">{preview}</p>
+        <div className="text-sm text-gray-300 mt-4">
           {Array.isArray(conversation?.chats) ? conversation.chats.length : 0} messages
         </div>
       </div>

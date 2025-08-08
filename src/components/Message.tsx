@@ -22,7 +22,7 @@ const Message: React.FC<MessageProps> = ({ type, content }) => {
       <div className="message-header text-sm text-gray-400 mb-1">
         {type === 'prompt' ? 'User' : 'AI'}
       </div>
-      <NeuromorphicCard className={type === 'prompt' ? 'bg-gray-900' : ''}>
+      <NeuromorphicCard className={`${type === 'prompt' ? 'bg-gray-900' : ''} text-white p-5` }>
         {content.map((item, index) => {
           switch (item.type) {
             case 'p':

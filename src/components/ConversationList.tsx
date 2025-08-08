@@ -81,7 +81,7 @@ const ConversationList: React.FC<ConversationListProps> = ({
   
   return (
     <div className="conversation-list">
-      <NeuromorphicCard className="mb-6">
+      <NeuromorphicCard className="mb-6 text-white">
         <div className="flex flex-col gap-3">
           <SearchBar 
             value={searchTerm}
@@ -89,7 +89,7 @@ const ConversationList: React.FC<ConversationListProps> = ({
             onSearch={handleSearch}
             placeholder="Search conversations..."
           />
-          <div className="sort-controls flex flex-wrap gap-2">
+          <div className="sort-controls flex flex-wrap gap-2 text-white">
             <button 
               className={`neuromorphic-button px-3 py-2 text-white ${sortField === 'title' ? 'bg-blue-900' : ''}`}
               onClick={() => handleSort('title')}

@@ -26,7 +26,7 @@ const NeuromorphicCard: React.FC<NeuromorphicCardProps> = ({
 
   return (
     <div 
-      className={`neuromorphic-card p-4 ${className}`}
+      className={`neuromorphic-card p-4 text-white ${className}`}
       onClick={onClick}
       onKeyDown={onClick ? handleKeyDown : undefined}
       role={role}

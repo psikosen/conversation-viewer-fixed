@@ -36,7 +36,7 @@ export default function Home() {
 
   return (
     <Layout title="Conversation Viewer">
-      <div className="mb-6">
+      <div className="mb-6 text-white">
         <ClientFileReader 
           onFileLoaded={handleFileLoaded}
           buttonText="Load Conversations JSON"
@@ -45,13 +45,13 @@ export default function Home() {
 
       {loading && (
         <NeuromorphicCard className="p-4 mb-6">
-          <p>Loading conversations...</p>
+          <p className="text-white">Loading conversations...</p>
         </NeuromorphicCard>
       )}
 
       {error && (
         <NeuromorphicCard className="p-4 mb-6 bg-red-900">
-          <p>Error: {error}</p>
+          <p className="text-white">Error: {error}</p>
         </NeuromorphicCard>
       )}
 
@@ -64,7 +64,7 @@ export default function Home() {
         <div>
           <button 
             onClick={handleBackToList}
-            className="neuromorphic-button px-4 py-2 mb-6"
+            className="neuromorphic-button mb-6 text-white"
             aria-label="Back to conversation list"
           >
             ← Back to List

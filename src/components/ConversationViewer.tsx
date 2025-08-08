@@ -28,9 +28,9 @@ const ConversationViewer: React.FC<ConversationViewerProps> = ({ conversation })
   
   return (
     <div className="conversation-viewer">
-      <NeuromorphicCard className="mb-6 p-6">
-        <h2 className="text-2xl font-bold mb-2">{conversation.meta.title}</h2>
-        <p className="text-sm text-gray-400">
+      <NeuromorphicCard className="mb-6 p-6 text-white">
+        <h2 className="text-2xl font-bold mb-2 text-white">{conversation.meta.title}</h2>
+        <p className="text-sm text-gray-300">
           Exported: {new Date(conversation.meta.exported_at).toLocaleString()}
         </p>
       </NeuromorphicCard>

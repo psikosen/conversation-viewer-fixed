@@ -1,6 +1,4 @@
-# Neuromorphic Design JS Application - Usage Guide
-
-This application is a neuromorphic design viewer for conversations exported from Claude or similar AI assistants. It features a black neuromorphic design with adjustable grid view, search functionality, and proper formatting for conversations including code blocks and LaTeX.
+# GPT Archive Chat History Reader
 
 ## Features
 

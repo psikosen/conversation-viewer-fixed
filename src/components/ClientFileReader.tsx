@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 interface FileReaderProps {
   onFileLoaded: (data: unknown) => void;
@@ -12,6 +12,7 @@ const ClientFileReader: React.FC<FileReaderProps> = ({
   buttonText = 'Select JSON File'
 }) => {
   const [fileName, setFileName] = useState<string>('');
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -56,20 +57,27 @@ const ClientFileReader: React.FC<FileReaderProps> = ({
     headReader.readAsText(headBlob);
   };
 
+  const openPicker = () => {
+    if (!inputRef.current) return;
+    inputRef.current.click();
+  };
+
   return (
     <div className="mb-6">
-      <label className="neuromorphic-button inline-block px-4 py-2 cursor-pointer">
+      <input
+        ref={inputRef}
+        type="file"
+        accept={accept}
+        onChange={handleFileChange}
+        style={{ display: 'none' }}
+        aria-hidden
+      />
+      <button type="button" onClick={openPicker} className="neuromorphic-button cursor-pointer">
         {buttonText}
-        <input
-          type="file"
-          accept={accept}
-          onChange={handleFileChange}
-          className="hidden"
-        />
-      </label>
+      </button>
       {fileName && (
-        <span className="ml-3 text-sm text-gray-400">
-          Selected file: {fileName}
+        <span className="ml-3 text-sm text-white/80 align-middle">
+          {fileName}
         </span>
       )}
     </div>

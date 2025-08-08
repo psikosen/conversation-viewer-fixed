@@ -28,11 +28,11 @@ const Pagination: React.FC<PaginationProps> = ({
 
   return (
     <nav aria-label="Pagination" className="mt-6">
-      <div className="flex justify-center items-center space-x-2">
+      <div className="flex justify-center items-center space-x-2 text-white">
         <button
           onClick={() => onPageChange(1)}
           disabled={currentPage === 1}
-          className={`neuromorphic-button px-3 py-1 ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`neuromorphic-button ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
           aria-label="Go to first page"
         >
           &laquo;
@@ -41,7 +41,7 @@ const Pagination: React.FC<PaginationProps> = ({
         <button
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className={`neuromorphic-button px-3 py-1 ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`neuromorphic-button ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
           aria-label="Go to previous page"
         >
           &lsaquo;
@@ -64,7 +64,7 @@ const Pagination: React.FC<PaginationProps> = ({
           <button
             key={number}
             onClick={() => onPageChange(number)}
-            className={`neuromorphic-button px-3 py-1 ${currentPage === number ? 'bg-blue-900' : ''}`}
+            className={`neuromorphic-button ${currentPage === number ? 'bg-blue-900' : ''}`}
             aria-label={`Page ${number}`}
             aria-current={currentPage === number ? 'page' : undefined}
           >
@@ -77,7 +77,7 @@ const Pagination: React.FC<PaginationProps> = ({
             {endPage < totalPages - 1 && <span className="px-1" aria-hidden="true">...</span>}
             <button
               onClick={() => onPageChange(totalPages)}
-              className="neuromorphic-button px-3 py-1"
+              className="neuromorphic-button"
               aria-label={`Page ${totalPages}`}
             >
               {totalPages}
@@ -88,7 +88,7 @@ const Pagination: React.FC<PaginationProps> = ({
         <button
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className={`neuromorphic-button px-3 py-1 ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`neuromorphic-button ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : ''}`}
           aria-label="Go to next page"
         >
           &rsaquo;
@@ -97,7 +97,7 @@ const Pagination: React.FC<PaginationProps> = ({
         <button
           onClick={() => onPageChange(totalPages)}
           disabled={currentPage === totalPages}
-          className={`neuromorphic-button px-3 py-1 ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`neuromorphic-button ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : ''}`}
           aria-label="Go to last page"
         >
           &raquo;

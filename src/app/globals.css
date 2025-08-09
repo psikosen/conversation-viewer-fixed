@@ -16,8 +16,7 @@
   --card-shadow-dark: 8, 8, 10;
   --accent-color: var(--lavender);
 }
-
-/* App background gradient with depth */
+ 
 .bg-app-gradient {
   background: radial-gradient(1200px 800px at 80% -10%, rgba(var(--lavender-soft), 0.35), transparent 60%),
               radial-gradient(1000px 700px at -10% 120%, rgba(var(--background-mid-rgb), 0.6), transparent 60%),
@@ -35,15 +34,45 @@
 }
 
 .neuromorphic-card {
+  position: relative;
   background-color: rgb(var(--card-bg));
   border-radius: 28px;
-  box-shadow: 
+  box-shadow:
     12px 12px 28px rgba(var(--card-shadow-dark), 0.7),
     -12px -12px 28px rgba(var(--card-shadow-light), 0.25),
     inset 0 0 0 1px rgba(255, 255, 255, 0.04);
   transition: all 0.3s ease;
-  color: #ffffff; /* ensure text in cards is white by default */
-  overflow: hidden; /* keep inner content inside */
+  color: #ffffff;
+  overflow: hidden;  
+  padding: 12px;
+  margin-top: 4px;
+}
+
+.neuromorphic-card,
+.neuromorphic-card * {
+  min-width: 0;               
+  overflow-wrap: anywhere;     
+  word-break: break-word;    
+}
+
+ .neuromorphic-card pre,
+.neuromorphic-card code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .neuromorphic-card:hover {
@@ -145,6 +174,8 @@ code {
 .katex, .katex-display, .katex-html {
   color: #fff;
 }
+.grid-container { gap: 32px; }
+@media (min-width: 1024px) { .grid-container { gap: 36px; } }
 
 /* Force headings to white (in case of inheritance issues) */
 h1, h2, h3, h4, h5, h6 { color: #ffffff; }

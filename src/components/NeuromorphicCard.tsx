@@ -9,26 +9,38 @@ interface NeuromorphicCardProps {
   tabIndex?: number;
 }
 
-const NeuromorphicCard: React.FC<NeuromorphicCardProps> = ({ 
-  children, 
+const NeuromorphicCard: React.FC<NeuromorphicCardProps> = ({
+  children,
   className = '',
   onClick,
   role = onClick ? 'button' : undefined,
   ariaLabel,
-  tabIndex = onClick ? 0 : undefined
+  tabIndex = onClick ? 0 : undefined,
 }) => {
+  const isClickable = Boolean(onClick);
+
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (onClick && (e.key === 'Enter' || e.key === ' ')) {
+    if (!isClickable) return;
+    if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
-      onClick();
+      onClick?.();
     }
   };
 
   return (
-    <div 
-      className={`neuromorphic-card p-4 text-white ${className}`}
+    <div
+      className={[
+        'neuromorphic-card',
+        'text-white',
+        'min-w-0',            // lets children wrap inside flex layouts
+        'p-6', 'md:p-7',      // more breathing room
+        isClickable
+          ? 'cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[rgba(163,136,245,0.7)] focus-visible:ring-offset-2'
+          : '',
+        className,
+      ].join(' ').trim()}
       onClick={onClick}
-      onKeyDown={onClick ? handleKeyDown : undefined}
+      onKeyDown={isClickable ? handleKeyDown : undefined}
       role={role}
       aria-label={ariaLabel}
       tabIndex={tabIndex}

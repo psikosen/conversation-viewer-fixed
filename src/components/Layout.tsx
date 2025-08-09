@@ -23,8 +23,8 @@ const Layout: React.FC<LayoutProps> = ({ children, title = 'Conversation Viewer'
           {/* Hero split */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 mb-10">
             <div>
-              <h2 className="hero-title text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white">
-                Explore your <span className="text-lavender">Conversations</span>
+              <h2 className="hero-title text-3xl sm:text-4xl font-bold text-white">
+                Explore your <span >Conversations</span>
               </h2>
               <p className="mt-4 text-secondary max-w-prose text-white/80">
                 A sleek, modern viewer for JSON chat exports. Search, browse and deep dive with elegant typography, smooth gradients and a Web3-inspired aesthetic.
@@ -41,8 +41,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title = 'Conversation Viewer'
           {children}
         </main>
         <footer className="py-8 px-4 sm:px-6 lg:px-10 border-t border-white/10 text-center text-sm text-secondary" role="contentinfo">
-          &copy; {new Date().getFullYear()} Conversation Viewer
-        </footer>
+         </footer>
       </div>
     </AccessibilityProvider>
   );

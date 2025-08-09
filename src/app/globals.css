@@ -10,7 +10,7 @@
 
   --lavender: 163, 136, 245; /* #A388F5 */
   --lavender-soft: 210, 179, 255; /* #D2B3FF */
-  --text-secondary: 179, 179, 179; /* #B3B3B3 */
+  --text-secondary: 200, 200, 200; /* softer secondary */
   --card-bg: 12, 12, 14; /* deep black */
   --card-shadow-light: 50, 30, 80;
   --card-shadow-dark: 8, 8, 10;
@@ -19,20 +19,21 @@
 
 /* Light/Dark theme switches (default light) */
 .theme-light .bg-app-gradient {
-  background: radial-gradient(1200px 800px at 80% -10%, rgba(var(--lavender-soft), 0.15), transparent 60%),
-              radial-gradient(1000px 700px at -10% 120%, rgba(230,230,255,0.35), transparent 60%),
-              linear-gradient(180deg, #ffffff 0%, #f6f3ff 40%, #efe9ff 100%);
+  background: radial-gradient(1200px 800px at 80% -10%, rgba(var(--lavender-soft), 0.12), transparent 60%),
+              radial-gradient(1000px 700px at -10% 120%, rgba(230,230,255,0.22), transparent 60%),
+              linear-gradient(180deg, #ffffff 0%, #f8f6ff 45%, #f2eeff 100%);
 }
 .theme-light body, .theme-light .neuromorphic-card, .theme-light .neuromorphic-button, .theme-light .neuromorphic-input {
   color: #111;
 }
 .theme-light .neuromorphic-card {
   background-color: #ffffff;
-  box-shadow: 0 10px 30px rgba(10, 10, 10, 0.08), inset 0 0 0 1px rgba(10, 10, 10, 0.06);
+  box-shadow: 0 8px 22px rgba(10, 10, 10, 0.06), inset 0 0 0 1px rgba(10, 10, 10, 0.05);
 }
 .theme-light .neuromorphic-button {
-  background-color: #0a0a0a;
+  background-color: #111827;
   color: #fff;
+  box-shadow: 0 6px 14px rgba(17, 24, 39, 0.25);
 }
 .theme-light .neuromorphic-input {
   background-color: #ffffff;
@@ -61,8 +62,8 @@
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image: radial-gradient(600px 600px at 20% 10%, rgba(163, 136, 245, 0.08), transparent 50%),
-                    radial-gradient(600px 600px at 80% 90%, rgba(210, 179, 255, 0.06), transparent 50%);
+  background-image: radial-gradient(600px 600px at 20% 10%, rgba(163, 136, 245, 0.06), transparent 55%),
+                    radial-gradient(600px 600px at 80% 90%, rgba(210, 179, 255, 0.04), transparent 55%);
   mask-image: radial-gradient(50% 50% at 50% 50%, black 40%, transparent 100%);
   z-index: 0;
 }
@@ -72,9 +73,9 @@
   background-color: rgb(var(--card-bg));
   border-radius: 28px;
   box-shadow:
-    12px 12px 28px rgba(var(--card-shadow-dark), 0.7),
-    -12px -12px 28px rgba(var(--card-shadow-light), 0.25),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    8px 8px 20px rgba(var(--card-shadow-dark), 0.5),
+    -8px -8px 20px rgba(var(--card-shadow-light), 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03);
   transition: all 0.3s ease;
   color: #ffffff;
   overflow: hidden;  
@@ -111,19 +112,19 @@
 
 .neuromorphic-card:hover {
   box-shadow: 
-    8px 16px 36px rgba(var(--card-shadow-dark), 0.9),
-    -8px -16px 36px rgba(var(--card-shadow-light), 0.35),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-  transform: translateY(-3px);
+    6px 12px 28px rgba(var(--card-shadow-dark), 0.6),
+    -6px -12px 28px rgba(var(--card-shadow-light), 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
 }
 
 .neuromorphic-button {
   background-color: rgb(var(--card-bg));
   border-radius: 9999px; /* pill */
   box-shadow: 
-    4px 8px 18px rgba(var(--card-shadow-dark), 0.8),
-    -4px -8px 18px rgba(var(--card-shadow-light), 0.25),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+    3px 6px 14px rgba(var(--card-shadow-dark), 0.45),
+    -3px -6px 14px rgba(var(--card-shadow-light), 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
   transition: all 0.2s ease;
   color: #fff;
   padding: 0.75rem 1rem;
@@ -136,11 +137,11 @@
 
 .neuromorphic-button:hover {
   box-shadow: 
-    2px 6px 14px rgba(var(--card-shadow-dark), 0.85),
-    -2px -6px 14px rgba(var(--card-shadow-light), 0.35),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-  transform: translateY(0.5px);
-  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+    2px 5px 12px rgba(var(--card-shadow-dark), 0.55),
+    -2px -5px 12px rgba(var(--card-shadow-light), 0.22),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  transform: translateY(0.25px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
 }
 
 .neuromorphic-button:active {

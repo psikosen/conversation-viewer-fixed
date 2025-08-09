@@ -16,6 +16,40 @@
   --card-shadow-dark: 8, 8, 10;
   --accent-color: var(--lavender);
 }
+
+/* Light/Dark theme switches (default light) */
+.theme-light .bg-app-gradient {
+  background: radial-gradient(1200px 800px at 80% -10%, rgba(var(--lavender-soft), 0.15), transparent 60%),
+              radial-gradient(1000px 700px at -10% 120%, rgba(230,230,255,0.35), transparent 60%),
+              linear-gradient(180deg, #ffffff 0%, #f6f3ff 40%, #efe9ff 100%);
+}
+.theme-light body, .theme-light .neuromorphic-card, .theme-light .neuromorphic-button, .theme-light .neuromorphic-input {
+  color: #111;
+}
+.theme-light .neuromorphic-card {
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(10, 10, 10, 0.08), inset 0 0 0 1px rgba(10, 10, 10, 0.06);
+}
+.theme-light .neuromorphic-button {
+  background-color: #0a0a0a;
+  color: #fff;
+}
+.theme-light .neuromorphic-input {
+  background-color: #ffffff;
+  color: #111;
+}
+.theme-light .neuromorphic-input::placeholder {
+  color: rgba(17,17,17,0.6);
+}
+
+.theme-dark .bg-app-gradient {
+  background: radial-gradient(1200px 800px at 80% -10%, rgba(var(--lavender-soft), 0.35), transparent 60%),
+              radial-gradient(1000px 700px at -10% 120%, rgba(var(--background-mid-rgb), 0.6), transparent 60%),
+              linear-gradient(180deg, rgb(var(--background-start-rgb)) 0%, rgb(var(--background-mid-rgb)) 35%, rgb(var(--background-end-rgb)) 120%);
+}
+.theme-dark body {
+  color: rgb(var(--foreground-rgb));
+}
  
 .bg-app-gradient {
   background: radial-gradient(1200px 800px at 80% -10%, rgba(var(--lavender-soft), 0.35), transparent 60%),

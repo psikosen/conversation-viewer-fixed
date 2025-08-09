@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
+    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} theme-light`}>
       <body className="font-body bg-app-gradient text-white antialiased">
         {/* Background decorative layers */}
         <div className="app-bg-overlay" aria-hidden="true" />

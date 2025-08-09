@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import AccessibilityProvider from './AccessibilityProvider';
+import ThemeToggle from './ThemeToggle';
 
 interface LayoutProps {
   children: ReactNode;
@@ -13,9 +14,8 @@ const Layout: React.FC<LayoutProps> = ({ children, title = 'Conversation Viewer'
         <header className="py-8 px-4 sm:px-6 lg:px-10 border-b border-white/10" role="banner">
           <div className="flex items-center justify-between">
             <h1 className="hero-title text-3xl sm:text-4xl font-bold text-white">{title}</h1>
-            <nav className="flex gap-3" role="navigation" aria-label="Main Navigation">
-              <button className="neuromorphic-button uppercase text-xs" aria-label="Home">Home</button>
-              <button className="neuromorphic-button uppercase text-xs" aria-label="Projects">Projects</button>
+            <nav className="flex gap-3 items-center" role="navigation" aria-label="Main Navigation">
+                <ThemeToggle />
             </nav>
           </div>
         </header>
@@ -30,13 +30,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title = 'Conversation Viewer'
                 A sleek, modern viewer for JSON chat exports. Search, browse and deep dive with elegant typography, smooth gradients and a Web3-inspired aesthetic.
               </p>
             </div>
-            <div className="flex items-start lg:items-center justify-start lg:justify-end gap-3 text-white">
-              <button className="neuromorphic-button uppercase tracking-wide text-sm text-white" onClick={() => {
-                const picker = document.querySelector<HTMLInputElement>('input[type="file"][accept]');
-                picker?.click();
-              }}>Load JSON</button>
-              <button className="neuromorphic-button uppercase tracking-wide text-sm text-white">View Samples</button>
-            </div>
+             
           </div>
           {children}
         </main>
